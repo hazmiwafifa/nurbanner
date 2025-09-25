@@ -1,117 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="src/output.css" rel="stylesheet" />
     <title>PORTFOLIO HAZMI</title>
   </head>
-  <body>
+  <body class="bg-[#000520]">
+    <div class="flex relative py-2 px-7">
+      <img
+        src="dist/Image/nur_banner.png"
+        alt="logo"
+        class="flex relative justify-between items-center gap-16 py-1 px-9 left-0 translate-x-[-25%] top-[20px]"
+      />
+    </div>
     <!-- Header Start -->
-    <header
-      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
-    >
+    <header>
       <div class="container">
-        <div class="flex items-center justify-between relative">
-          <div class="px-4">
-            <a href="#home" class="font-bold text-lg text-primary block py-6"
-              >Hazmi</a
-            >
-          </div>
-          <div class="flex items-center justify-center px-4">
-            <button
-              id="hamburger"
-              name="hamburger"
-              type="button"
-              class="block absolute right-4 py-2 px-3 rounded-xl bg-slate-900 bg-opacity-50 bg-transparent hover:bg-primary hover:scale-110 hover:bg-opacity-50 trasition duration-300 delay-75 ease-in-out lg:hidden"
-            >
-              <span
-                class="hamburger-line origin-top-left transition duration-300 ease-in-out"
-              ></span>
-              <span
-                class="hamburger-line transition duration-300 ease-in-out"
-              ></span>
-              <span
-                class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"
-              ></span>
-            </button>
-
-            <nav
-              id="nav-menu"
-              class="hidden absolute items-center py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none lg:px-1"
-            >
-              <ul class="block lg:flex">
-                <li class="group">
-                  <a
-                    href="#home"
-                    class="text-base text-dark py-2 px-3 mx-4 block hover:bg-primary hover:text-white hover:rounded-full"
-                    >Beranda</a
-                  >
-                </li>
-
-                <li class="group">
-                  <a
-                    href="#about"
-                    class="text-base text-dark py-2 px-3 mx-4 block hover:bg-primary hover:text-white hover:rounded-full"
-                    >About</a
-                  >
-                </li>
-                <li class="group">
-                  <a
-                    href="#portfolio"
-                    class="text-base text-dark py-2 px-3 mx-4 flex hover:bg-primary hover:text-white hover:rounded-full"
-                    >Portfolio</a
-                  >
-                </li>
-                <li class="group">
-                  <a
-                    href="#clients"
-                    class="text-base text-dark py-2 px-3 mx-4 block hover:bg-primary hover:text-white hover:rounded-full"
-                    >Clients</a
-                  >
-                </li>
-                <li class="group">
-                  <a
-                    href="#blog"
-                    class="text-base text-dark py-2 px-3 mx-4 block hover:bg-primary hover:text-white hover:rounded-full"
-                    >Blog</a
-                  >
-                </li>
-                <li class="group">
-                  <a
-                    href="#contact"
-                    class="text-base text-dark py-2 px-3 mx-4 block hover:bg-primary hover:text-white hover:rounded-full"
-                    >Contact</a
-                  >
-                </li>
-              </ul>
-            </nav>
-          </div>
+        <div class="flex items-center justify-center px-4">
+          <button
+            id="hamburger"
+            name="hamburger"
+            type="button"
+            class="block absolute top-0 right-3 py-2 px-3 rounded-xl bg-slate-900 bg-opacity-50 bg-transparent hover:bg-primary hover:scale-110 hover:bg-opacity-50 trasition duration-300 delay-75 ease-in-out md:hidden"
+          >
+            <span
+              class="hamburger-line origin-top-left transition duration-300 ease-in-out"
+            ></span>
+            <span
+              class="hamburger-line transition duration-300 ease-in-out"
+            ></span>
+            <span
+              class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"
+            ></span>
+          </button>
         </div>
+        <nav
+          id="nav-menu"
+          name="nav-menu"
+          class="hidden relative md:flex md:absolute bg-black justify-between items-center gap-16 py-3 px-1 left-1/2 translate-x-[-50%] top-[20px] rounded-full backdrop-blur-sm bg-opacity-80 text-white shadow-lg z-10 transition-all"
+        >
+          <ul class="flex items-center">
+            <li class="px-[25px] list-none z-10">
+              <a href="#home" class="block py-1 text-base decoration-0 z-[1]"
+                >Home</a
+              >
+            </li>
+            <li class="px-[25px] list-none z-10">
+              <a href="#about" class="block py-1 text-base decoration-0 z-[1]"
+                >About</a
+              >
+            </li>
+            <li class="px-[25px] list-none z-10">
+              <a
+                href="#portfolio"
+                class="block py-1 text-base decoration-0 z-[1]"
+                >Portfolio</a
+              >
+            </li>
+            <li class="px-[25px] list-none z-10">
+              <a href="#clients" class="block py-1 text-base decoration-0 z-[1]"
+                >Clients</a
+              >
+            </li>
+            <li class="px-[25px] list-none z-10">
+              <a href="#blog" class="block py-1 text-base decoration-0 z-[1]"
+                >Blog</a
+              >
+            </li>
+            <li class="px-[25px] list-none z-10">
+              <a href="#contact" class="block py-1 text-base decoration-0 z-[1]"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <span
+            id="slider"
+            class="absolute top-0 left-0 right-0 w-0 h-[100%] bg-[#0035e4] rounded-full bg-opacity-70 pointer-events-none z-[1] transition-all"
+          ></span>
+        </nav>
       </div>
     </header>
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="pt-36">
+    <section id="home" class="pt-36 pb-32">
+      <div
+        class="bg-[#000a54] absolute bottom-[-1rem] right-[11rem] h-[50rem] w-[31.25rem] rounded-full blur-[10rem] -z-20"
+      ></div>
+      <div
+        class="bg-[#65ddff] absolute bottom-[-20rem] right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[5rem] -z-10"
+      ></div>
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full self-center px-4 lg:w-1/2">
+          <div class="w-full self-center px-10 lg:w-1/2">
             <h1 class="text-base font-semibold text-primary md:text-xl">
               Halo Semua 🖐,
-              <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl"
+              <span
+                class="block font-bold text-[#f6f6f6] text-4xl mt-1 lg:text-5xl"
                 >Saya Hazmi</span
               >
             </h1>
-            <h2 class="font-medium text-dark text-lg mb-5 mt-1 lg:text-2xl">
+            <h2
+              class="font-medium text-[#f6f6f6] text-lg mb-5 mt-3 lg:text-2xl"
+            >
               Graphic Designer
             </h2>
-            <p class="font-medium text-secondary mb-10 leading-relaxed">
+            <p class="font-medium text-[#f6f6f6] mb-10 leading-relaxed">
               Belajar Graphic Designer Begitu Menyenangkan
             </p>
             <a
               href="#"
-              class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:bg-pink-600 hover:opacity-80 transition duration-300 ease-in-out"
+              class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:bg-pink-600 hover:shadow-lg hover:shadow-pink-200 hover:opacity-80 transition duration-300 ease-in-out"
               >Hubungi Saya</a
             >
           </div>
@@ -126,24 +126,26 @@
     <!-- Hero Section End -->
 
     <!-- About Section Start -->
-    <section id="about" class="pt-36 pb-32">
+    <section id="about" class="pt-36 pb-32 bg-slate-700">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-ful px-4 mb-10 lg:w-1/2">
             <h4 class="font-bold uppercase text-primary text-lg mb-3">
               Tentang Saya
             </h4>
-            <h2 class="font-bold text-dark text-3xl mb-5 max-w-md">
+            <h2 class="font-bold text-[#f6f6f6] text-3xl mb-5 max-w-md">
               Yuk Belajar Design di NUR BANNER
             </h2>
-            <p class="font-medium text-base text-secondary max-w-xl">
+            <p class="font-medium text-base text-[#e5e5e5] max-w-xl">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
               voluptas consectetur quasi ipsa quos! Quae, ea.
             </p>
           </div>
           <div class="w-full px-4 lg:w-1/2">
-            <h3 class="font-semibold text-dark text-2xl mb-4">Mari berteman</h3>
-            <p class="font-medium text-base text-secondary mb-6">
+            <h3 class="font-semibold text-[#f6f6f6] text-2xl mb-4">
+              Mari berteman
+            </h3>
+            <p class="font-medium text-base text-[#e5e5e5] mb-6">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
               atque impedit ratione? Iure sapiente delectus architecto quas
               itaque?
@@ -153,7 +155,7 @@
               <a
                 href="https://Instagram.com"
                 target="blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-pink-500 hover:bg-gradient-to-br from-indigo-500 from-10% via-pink-500 via-30% to-orange-500 to-90% hover:text-white transition duration-300 ease-in-out"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-pink-500 hover:bg-gradient-to-br from-indigo-500 from-10% via-pink-500 via-30% to-orange-500 to-90% hover:scale-[1.5] hover:text-white transition duration-300 delay-100 ease-in-out"
               >
                 <svg
                   role="img"
@@ -171,7 +173,7 @@
               <a
                 href="https://tiktok.com"
                 target="blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-primary hover:bg-gray-950 hover:text-white transition duration-300 ease-in-out"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:scale-[1.5] hover:border-primary hover:bg-gray-950 hover:text-white transition duration-300 delay-100 ease-in-out"
               >
                 <svg
                   role="img"
@@ -189,7 +191,7 @@
               <a
                 href=""
                 target="blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-green-600 hover:bg-green-600 hover:text-white transition duration-300 ease-in-out"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:scale-[1.5] delay-100 hover:border-green-600 hover:bg-green-600 hover:text-white transition duration-300 ease-in-out"
               >
                 <svg
                   role="img"
@@ -287,10 +289,10 @@
     <!-- Portfolio Section End -->
 
     <!-- Client Section Start -->
-    <section id="clients" class="pt-36 pb-32 bg-slate-700">
+    <section id="clients" class="pt-36 pb-16 bg-slate-800">
       <div class="container">
         <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-16">
+          <div class="mx-auto text-center mb-16">
             <h4 class="font-bold uppercase text-lg text-primary mb-2">
               Clients
             </h4>
@@ -320,7 +322,7 @@
     <!-- Client Section End -->
 
     <!-- Blog Section Start -->
-    <section id="cilents" class="pt-36 pb-32 bg-slate-100">
+    <section id="blog" class="pt-36 pb-32 bg-slate-100">
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
@@ -424,7 +426,7 @@
     <!-- Blog Section End -->
 
     <!-- Contact Section Start -->
-    <section id="contact" class="pt-36 pb-32">
+    <section id="contact" class="pt-36 pb-32 bg-white">
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
@@ -525,10 +527,21 @@
             </ul>
           </div>
         </div>
-        <div class="w-full pt-10 border-t border-slate-700"></div>
+        <div class="w-full pt-10 border-t border-slate-700">
+          <div class="flex items-center justify-center">
+            <p class="text-cemter text-base text-white">Dibuat oleh Hazmi</p>
+          </div>
+        </div>
       </div>
     </footer>
     <!-- Footer Section End -->
+
+    <!-- Back to top Start-->
+    <a
+      href="#home"
+      class="fixed bottom-4 right-4 z-[9999] h-14 w-14 rounded-full bg-primary p-4"
+    ></a>
+    <!-- Back to top End-->
     <script src="dist/js/script.js"></script>
   </body>
 </html>
