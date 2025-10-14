@@ -1,9 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-rodokputih: #f6f6f6;
+  --color-primary: #049dd9;
+  --color-secondary: #64748b;
+  --color-dark: #000520;
+  --color-biru: #0903a6;
+}
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
 }
 
@@ -28,3 +34,17 @@ body {
 .hamburger-active > span:nth-child(3) {
   @apply -rotate-45;
 }
+
+/* .button--stroke:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  border: 0.125rem solid theme("colors.rodokputih");
+  border-radius: 6.25rem;
+  pointer-events: none;
+  transition: border-color 0.3s theme ease-in-out
+    cubic-bezier(0.645, 0.045, 0.355, 1);
+} */
