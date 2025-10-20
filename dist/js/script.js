@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     ScrollTrigger,
     MorphSVGPlugin,
     MotionPathPlugin,
-    Flip
+    Flip,
+    PixiPlugin
   );
 
   console.clear();
@@ -302,16 +303,34 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   gsap.from("#gradasibmud", {
     duration: 5.5,
-    ease: "elastic.out(1,0.3)",
+    autoAlpha: 0,
     y: 300,
+    ease: "elastic.out(1,0.3)",
+    delay: 1.5,
+  });
+
+  gsap.from("#gradasibmud1", {
+    duration: 5.5,
+    autoAlpha: 0,
+    y: 300,
+    ease: "elastic.out(1,0.3)",
     delay: 1.5,
   });
 
   gsap.from("#gradasibmud2", {
     duration: 5.5,
-    ease: "elastic.out(1,0)",
+    autoAlpha: 0,
     y: 600,
+    ease: "elastic.out(1,0)",
     delay: 1.5,
+  });
+
+  gsap.from("#gradasibmud3", {
+    width: 0,
+    duration: 5.9,
+    autoAlpha: 0,
+    ease: "power3.out",
+    delay: 4,
   });
 
   SplitText.create("#judul", {
@@ -344,6 +363,42 @@ document.addEventListener("DOMContentLoaded", (event) => {
         delay: 2,
       });
     },
+  });
+
+  let splitdefinisi = SplitText.create(".definisi", {
+    type: "words, chars, lines",
+    aria: "hidden",
+  });
+
+  gsap.from(splitdefinisi.words, {
+    duration: 2,
+    y: 50,
+    autoAlpha: 0,
+    stagger: 0.01,
+    ease: "power4.out",
+    delay: 3.5,
+  });
+
+  let splitdefinisi2 = SplitText.create(".definisi2", {
+    type: "words, chars, lines",
+    aria: "hidden",
+  });
+
+  gsap.from(splitdefinisi2.words, {
+    duration: 2,
+    y: 50,
+    autoAlpha: 0,
+    stagger: 0.01,
+    ease: "power4.out",
+    delay: 4.5,
+  });
+
+  gsap.from(".panahdefin", {
+    duration: 2,
+    y: 50,
+    autoAlpha: 0,
+    ease: "power4.out",
+    delay: 4.5,
   });
 
   gsap.from("#bintang1", {
@@ -388,42 +443,162 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   let splitport = SplitText.create(".textportfolio", {
     type: "words, chars, lines",
-    mask: "lines",
+    aria: "hidden",
   });
 
-  let splitabout = SplitText.create(".tent", {
+  let splitabout = SplitText.create(".tentang", {
     type: "words, chars, lines",
-    mask: "lines",
+    aria: "hidden",
+    // mask: "lines",
   });
 
-  let tlabout = gsap.timeline({
-    // yes, we can add it to an entire timeline!
+  let splitblog = SplitText.create(".blogu", {
+    type: "words, chars, lines",
+    aria: "hidden",
+    // mask: "lines",
+  });
+
+  // let splitcp = SplitText.create(".textport", {
+  //   type: "words, chars, lines",
+  //   aria: "hidden",
+  //   // mask: "lines",
+  // });
+
+  // gsap.from(splitabout.words, {
+  //   scrollTrigger: ".tent",
+  //   yPercent: 100,
+  //   autoAlpha: 0,
+  //   duration: 1.5,
+  //   easae: "power3.out",
+  // });
+
+  // gsap.from(splitblog.words, {
+  //   scrollTrigger: ".blogu",
+  //   yPercent: 100,
+  //   autoAlpha: 0,
+  //   duration: 1.5,
+  //   easae: "power3.out",
+  // });
+
+  // let tlblogu = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: "#blog",
+  //     pin: true,
+  //     start: "top top",
+  //     end: "+=500",
+  //     scrub: 1,
+  //     snap: {
+  //       snapTo: "labels",
+  //       duration: { min: 0.2, max: 7 },
+  //       delay: 1,
+  //       ease: "power3.out",
+  //     },
+  //   },
+  // });
+
+  // tlblogu
+  //   .addLabel("start")
+  //   .from(splitblog.chars, {
+  //     yPercent: 50,
+  //     autoAlpha: 0,
+  //     filter: "blur(8px)",
+  //     duration: 2,
+  //     stagger: 0.1,
+  //   })
+  //   .addLabel("end");
+
+  gsap.from(splitblog.words, {
+    autoAlpha: 0,
+    duration: 3,
+    filter: "blur(8px)",
+    ease: "sine.out",
+    stagger: 0.1,
     scrollTrigger: {
-      trigger: "#about",
-      pin: true, // pin the trigger element while active
-      start: "top top", // when the top of the trigger hits the top of the viewport
-      end: "+=500", // end after scrolling 500px beyond the start
-      scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-      snap: {
-        snapTo: "labels", // snap to the closest label in the timeline
-        duration: { min: 0.2, max: 7 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-        delay: 1, // wait 0.2 seconds from the last scroll event before doing the snapping
-        ease: CustomEase.create(
-          "custom",
-          "M0,0 C0.29,0 0.408,0.263 0.408,0.263 0.484,0.402 0.439,0.929 0.579,0.929 0.759,0.929 0.695,0.7 0.8,0.7 0.876,0.7 0.81,1 1,1 "
-        ), // the ease of the snap animation ("power3" by default)
-      },
+      trigger: ".blogu",
+      toggleActions: "restart pause resume none",
     },
   });
 
-  tlabout
-    .addLabel("start")
-    .from(splitabout.words, {
-      yPercent: 100,
-      opacity: 0,
-      autoAlpha: 0,
-    })
-    .addLabel("end");
+  gsap.from(splitabout.words, {
+    autoAlpha: 0,
+    duration: 3,
+    filter: "blur(8px)",
+    ease: "sine.out",
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: ".tentang",
+      toggleActions: "restart pause resume none",
+      // start: "clamp(top center)",
+      // end: "clamp(bottom center)",
+    },
+  });
+
+  gsap.from(splitport.words, {
+    yPercent: 100,
+    autoAlpha: 0,
+    duration: 1.5,
+    filter: "blur(8px)",
+    ease: "sine.out",
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: ".textportfolio",
+      toggleActions: "restart pause resume none",
+      // start: "clamp(top center)",
+      // end: "clamp(bottom center)",
+    },
+  });
+
+  gsap.from(".button--stroke", {
+    height: 0,
+    width: 0,
+    autoAlpha: 0,
+    duration: 2,
+    delay: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".button--stroke",
+      toggleActions: "restart pause resume none",
+    },
+  });
+
+  gsap.from(".button--stroke .button__label", {
+    autoAlpha: 0,
+    duration: 1.5,
+    delay: 2.9,
+    stagger: 0.1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".button--stroke",
+      toggleActions: "restart pause resume none",
+    },
+  });
+
+  // let tlabout = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: "#about",
+  //     pin: true,
+  //     start: "top top",
+  //     end: "+=500",
+  //     scrub: 1,
+  //     snap: {
+  //       snapTo: "labels",
+  //       duration: { min: 0.2, max: 7 },
+  //       delay: 1,
+  //       ease: "since.out",
+  //     },
+  //   },
+  // });
+
+  // tlabout
+  //   .addLabel("start")
+  //   .from(splitabout.words, {
+  //     yPercent: 100,
+  //     autoAlpha: 0,
+  //     filter: "blur(8px)",
+  //     duration: 2,
+  //     stagger: 0.1,
+  //   })
+  //   .addLabel("end");
 
   const cp = document.querySelector("#portfolio");
   const panels = gsap.utils.toArray(".panel");
@@ -433,51 +608,87 @@ document.addEventListener("DOMContentLoaded", (event) => {
     lag: (i) => i * 1,
   });
 
+  // -------------------------------------------------------------scroll--------------------------------------//
   let tl1 = gsap.timeline({
-    // yes, we can add it to an entire timeline!
     scrollTrigger: {
       trigger: cp,
-      pin: true, // pin the trigger element while active
-      start: "top top", // when the top of the trigger hits the top of the viewport
-      end: () => "+=" + cp.offsetWidth, // end after scrolling 500px beyond the start
-      scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      pin: true,
+      start: "top top",
+      end: () => "+=" + cp.offsetWidth,
+      scrub: 1,
       snap: {
-        snapTo: "labels", // snap to the closest label in the timeline
-        duration: { min: 0.2, max: 7 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-        delay: 3, // wait 0.2 seconds from the last scroll event before doing the snapping
-        ease: CustomEase.create(
-          "custom",
-          "M0,0 C0.29,0 0.408,0.263 0.408,0.263 0.484,0.402 0.439,0.929 0.579,0.929 0.759,0.929 0.695,0.7 0.8,0.7 0.876,0.7 0.81,1 1,1 "
-        ), // the ease of the snap animation ("power3" by default)
+        snapTo: "labels",
+        duration: { min: 0.2, max: 30 },
+        delay: 3,
+        ease: "power4.out",
       },
     },
   });
 
-  // add animations and labels to the timeline
   tl1
     .addLabel("start")
-    .from(".textproject", {
-      yPercent: 100,
-      opacity: 0,
-      autoAlpha: 0,
-    })
-    .addLabel("judul")
-    .from(splitport.words, {
-      yPercent: 100,
-      autoAlpha: 0,
-      duration: 2,
-    })
-    .addLabel("button1")
-    .from(".button", { scale: 0, height: 0, autoAlpha: 0, duration: 2 })
-    .addLabel("button")
-    .from(".button", { width: 0, duration: 2 })
-    .addLabel("button_label")
-    .from(".button__label", { autoAlpha: 0, duration: 2 })
-    .addLabel("panel")
+    // .from(".textproject", {
+    //   yPercent: 100,
+    //   autoAlpha: 0,
+    //   filter: "blur(8px)",
+    //   duration: 1,
+    // })
+    // .addLabel("judul")
+    // .from(splitport.words, {
+    //   yPercent: 100,
+    //   autoAlpha: 0,
+    //   filter: "blur(8px)",
+    //   duration: 2,
+    // })
+    // .addLabel("button1")
+    // .from(".button", {
+    //   scale: 0,
+    //   height: 0,
+    //   autoAlpha: 0,
+    //   duration: 2,
+    // })
+    // .addLabel("button")
+    // .from(".button", { width: 0, duration: 2 })
+    // .addLabel("button_label")
+    // .from(".button__label", { autoAlpha: 0, duration: 2 })
+    // .addLabel("panel")
     .to(".panel", {
-      yPercent: -100 * (panels.length - 1),
-      duration: 2,
+      yPercent: -170 * (panels.length - 1),
+      duration: 7,
       ease: "none",
     })
+    // .addLabel("button_labelend")
+    // .to(".button__label", { autoAlpha: 0, duration: 2 })
+    // .addLabel("buttonend")
+    // .to(".button", { width: 0, duration: 3 })
+    // .addLabel("button1end")
+    // .to(".button", { scale: 0, height: 0, autoAlpha: 0, duration: 2 })
+    // .addLabel("tengah")
+    // .to(splitport.words, {
+    //   yPercent: -100,
+    //   autoAlpha: 0,
+    //   duration: 2,
+    //   filter: "blur(8px)",
+    // })
+    // .addLabel("judulend")
+    // .to(".textproject", {
+    //   yPercent: -100,
+    //   autoAlpha: 0,
+    //   filter: "blur(8px)",
+    // })
+
     .addLabel("end");
+
+  // gsap.from(splitcp.chars, {
+  //   autoAlpha: 0,
+  //   duration: 3,
+  //   filter: "blur(8px)",
+  //   ease: "sine.out",
+  //   stagger: 0.1,
+  //   scrollTrigger: {
+  //     trigger: "#portfolio",
+  //     start: "clamp(top center)",
+  //     end: "clamp(bottom center)",
+  //   },
+  // });
 });

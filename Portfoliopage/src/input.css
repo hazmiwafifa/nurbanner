@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rodokputih: #f6f6f6;
+  --color-primary: #049dd9;
+  --color-secondary: #64748b;
+  --color-dark: #000520;
+  --color-darkbanget: #000514;
+  --color-biru: #0903a6;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}

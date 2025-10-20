@@ -5,6 +5,7 @@
   --color-primary: #049dd9;
   --color-secondary: #64748b;
   --color-dark: #000520;
+  --color-darkbanget: #000514;
   --color-biru: #0903a6;
 }
 
@@ -34,17 +35,162 @@ body {
 .hamburger-active > span:nth-child(3) {
   @apply -rotate-45;
 }
+.wraplogo {
+  display: flex;
+  width: 90%;
+  max-width: 1700px;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+  margin-top: 5rem;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
 
-/* .button--stroke:after {
-  content: "";
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+
+.logoclient {
+  display: flex;
+  width: 200px;
+  height: 100px;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  border: 0.125rem solid theme("colors.rodokputih");
-  border-radius: 6.25rem;
-  pointer-events: none;
-  transition: border-color 0.3s theme ease-in-out
-    cubic-bezier(0.645, 0.045, 0.355, 1);
-} */
+  align-items: center;
+  justify-content: center;
+  object-position: center;
+  left: max(calc(200px * 11), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.logoclient img {
+  align-items: center;
+  justify-content: center;
+  object-position: center;
+}
+
+.logo1 {
+  animation-delay: calc(30s / 11 * (11 - 1) * -1);
+}
+
+.logo2 {
+  animation-delay: calc(30s / 11 * (11 - 2) * -1);
+}
+
+.logo3 {
+  animation-delay: calc(30s / 11 * (11 - 3) * -1);
+}
+
+.logo4 {
+  animation-delay: calc(30s / 11 * (11 - 4) * -1);
+}
+
+.logo5 {
+  animation-delay: calc(30s / 11 * (11 - 5) * -1);
+}
+
+.logo6 {
+  animation-delay: calc(30s / 11 * (11 - 6) * -1);
+}
+
+.logo7 {
+  animation-delay: calc(30s / 11 * (11 - 7) * -1);
+}
+
+.logo8 {
+  animation-delay: calc(30s / 11 * (11 - 8) * -1);
+}
+
+.logo9 {
+  animation-delay: calc(30s / 11 * (11 - 9) * -1);
+}
+
+.logo10 {
+  animation-delay: calc(30s / 11 * (11 - 10) * -1);
+}
+
+.logo11 {
+  animation-delay: calc(30s / 11 * (11 - 11) * -1);
+}
+
+/*.image-track-horizontal {
+
+  display: flex !important; 
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+  position: relative !important;
+  width: 300%;
+  padding: 1rem;
+  gap: 1rem;
+  cursor: grab;
+  transition: none;
+}
+.image-track-horizontal img {
+
+  width: 300px;
+  height: 350px;
+  max-width: none;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.75rem;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  filter: none;
+  opacity: 1;
+
+  left: 0 !important;
+  bottom: 0 !important;
+  margin: 0 !important;
+}
+
+#slider-container {
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}*/
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; /* Start completely transparent */
+  }
+  50% {
+    opacity: 1; /* Start completely transparent */
+  }
+  100% {
+    opacity: 0; /* Fully visible at the midpoint */
+  }
+}
+
+#gradasibmud {
+  animation-name: fadeInOut; /* Name of your @keyframes rule */
+  animation-duration: 4s; /* Total duration of one cycle (e.g., 4 seconds) */
+  animation-timing-function: ease-in-out; /* Controls the speed curve */
+  animation-iteration-count: infinite; /* Makes the animation repeat indefinitely */
+}
+
+#gradasibmud1 {
+  animation-name: fadeInOut; /* Name of your @keyframes rule */
+  animation-duration: 4s; /* Total duration of one cycle (e.g., 4 seconds) */
+  animation-timing-function: ease-in-out; /* Controls the speed curve */
+  animation-iteration-count: infinite; /* Makes the animation repeat indefinitely */
+}
+
+#gradasibmud3 {
+  animation-name: fadeInOut; /* Name of your @keyframes rule */
+  animation-duration: 4s; /* Total duration of one cycle (e.g., 4 seconds) */
+  animation-timing-function: ease-in-out; /* Controls the speed curve */
+  animation-iteration-count: infinite; /* Makes the animation repeat indefinitely */
+}

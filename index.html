@@ -53,7 +53,7 @@
             <nav
               id="nav-menu"
               name="nav-menu"
-              class="hidden relative md:flex md:absolute justify-center backdrop-blur-xs text-black items-center gap-16 py-[10px] px-[0.2px] left-1/2 translate-x-[-50%] top-[20px] bg-blend-difference bg-[rgba(241,241,241,0.8)] rounded-full shadow-lg z-10 transition-all"
+              class="hidden relative md:flex md:absolute justify-center backdrop-blur-xs text-black items-center gap-16 py-[10px] px-[0.2px] left-1/2 translate-x-[-50%] md:top-[20px] top-[-300] bg-blend-difference bg-[rgba(241,241,241,0.8)] rounded-full shadow-lg z-10 transition-all duration-300 ease-in-out"
             >
               <!-- <nav
               id="nav-menu"
@@ -80,13 +80,6 @@
                     href="#portfolio"
                     class="block py-1 text-base decoration-0 z-[1] text-center opacity-80 hover:text-blue-800 hover:opacity-100 hover:scale-[1.1] hover:font-bold transition duration-100 ease-in-out"
                     >Portfolio</a
-                  >
-                </li>
-                <li class="px-[25px] list-none z-10">
-                  <a
-                    href="#clients"
-                    class="block py-1 text-base decoration-0 z-[1] text-center opacity-80 hover:text-blue-800 hover:opacity-100 hover:scale-[1.1] hover:font-bold transition duration-100 ease-in-outduration-300 ease-in-out"
-                    >Clients</a
                   >
                 </li>
                 <li class="px-[25px] list-none z-10">
@@ -131,25 +124,40 @@
           <div class="container mx-auto">
             <div class="flex flex-col">
               <div class="w-full items-center justify-center">
-                <div class="bg-dark blur-2xl z-0"></div>
-                <div
-                  id="gradasibmud2"
-                  class="bg-[#000a54] absolute bottom-[-40rem] right-[1rem] left-[15rem] h-[70rem] w-[55rem] rounded-full blur-[7rem] z-0"
-                ></div>
-                <div
-                  id="gradasibmud"
-                  class="bg-[#65ddff] absolute bottom-[-25rem] right-[1rem] left-[23rem] h-[31.25rem] w-[41rem] rounded-full blur-[5rem] z-10"
-                ></div>
+                <div class="cahayabiru">
+                  <div
+                    id="gradasibmud2"
+                    class="absolute bg-[#000a54] place-self-center justify-center bottom-[-38rem] h-[70rem] w-[61rem] rounded-full blur-[7rem] z-[-12]"
+                  ></div>
+                  <div
+                    id="gradasibmud1"
+                    class="absolute bg-[#001eff] place-self-center justify-center bottom-[-32rem] h-[37rem] w-[45rem] rounded-full blur-[7rem] z-[-11]"
+                  ></div>
+                  <div
+                    id="gradasibmud"
+                    class="absolute bg-[#65ddff] place-self-center justify-center bottom-[-10.5rem] h-[19.25rem] w-[31rem] rounded-full blur-[5rem] z-[-9]"
+                  ></div>
+                  <div
+                    id="gradasibmud3"
+                    class="absolute place-self-center justify-center w-full z-[-10]"
+                  >
+                    <img
+                      src="/dist/Image/Cahayabiru.png"
+                      alt=""
+                      class="absolute place-self-center justify-center left-[-1rem] opacity-80 bottom-[-39rem] h-[15rem] w-[80rem]"
+                    />
+                  </div>
+                </div>
                 <h1
                   id="judul"
-                  class="relative text-[rgba(227,227,227,1)] text-center font-black text-[60px] uppercase z-20"
+                  class="text-rodokputih text-center font-black lg:text-[4rem] md:text-[3rem] text-[2.3rem] uppercase z-20"
                 >
                   Your Vision
-                  <br /><span class="px-0 font-bold">&</span> <br />OUR
-                  Expertise
+                  <p class="leading-12 font-bold">&</p>
+                  OUR Expertise
                 </h1>
                 <div
-                  class="flex items-center justify-center font-medium text-center text-rodokputih text-[22.918px] mb-5 mt-2"
+                  class="flex items-center justify-center font-medium text-center text-rodokputih text-[12px] lg:text-[1.2rem] md:text-[18.5414px] mb-5 mt-2"
                 >
                   <span id="subjudul"> Let's create design magic</span>
                   <img
@@ -166,6 +174,40 @@
                   />
                 </div>
               </div>
+              <div class="justify-items-end text-right right-0">
+                <p
+                  class="definisi end-0 w-1/5 text-[0.8rem] font-light tracking-wider text-[rgba(221,221,221,0.8)] top-[-1rem] px-10"
+                  aria-hidden="true"
+                >
+                  We are a creative team dedicated to creating attractive
+                  visuals for your products.
+                </p>
+              </div>
+              <div
+                class="flex justify-items-start items-center pl-10 text-left w-1/4"
+              >
+                <p
+                  class="definisi2 text-[0.8rem] font-light tracking-wider uppercase text-[rgba(221,221,221,0.8)] top-[-1rem] px-2"
+                >
+                  scroll to explore
+                </p>
+                <span
+                  class="panahdefin px-1 py-1 bg-transparent border-1 border-amber-50 rounded-full"
+                  ><svg
+                    class="w-4.5 h-4.5 text-gray-800 dark:text-white"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 19V5m0 14-4-4m4 4 4-4"
+                      class="stroke-2 stroke-[rgba(221,221,221,0.8)]"
+                    />
+                  </svg>
+                </span>
+              </div>
             </div>
           </div>
         </section>
@@ -174,19 +216,26 @@
         <!-- About Section Start -->
         <section
           id="about"
-          class="bagian pt-36 pb-32 bg-slate-700 h-[100vh] relative z-[0]"
+          class="bagian pt-36 pb-32 bg-gradient-to-b from-3% from-[rgba(0,5,32,0.01)] via-70% via-[rgba(0,5,20,1)] to-[rgba(0,5,32,1)] h-[100vh] relative z-[0]"
         >
           <div class="container mx-auto">
             <div class="flex flex-wrap">
-              <div id="about1" class="tetang w-full px-4 mb-10 lg:w-1/2">
-                <h4 class="tent font-bold text-rodokputih text-[60px] mb-3">
-                  Tentang Kami
+              <div
+                id="about1"
+                class="tentang w-full pl-34 mb-10"
+                aria-hidden="true"
+              >
+                <h4
+                  class="tent font-bold text-rodokputih lg:text-[4rem] md:text-[3rem] leading-15 text-[2.3rem]"
+                >
+                  Visions
                 </h4>
                 <p
-                  class="tent font-medium text-base text-rodokputih max-w-xl mb-6"
+                  class="tent font-medium text-[1rem] text-rodokputih max-w-xl mt-6 mb-6 leading-1"
                 >
-                  Kami adalah tim kreatif yang berdedikasi untuk mewujudkan
-                  ide-ide desain Anda
+                  Creating visual designs that are not only appealing to the eye
+                  but also easy to read and remember. Creating visual designs
+                  that can convey emotions to the viewer.
                 </p>
               </div>
             </div>
@@ -202,15 +251,16 @@
           <div class="container mx-auto">
             <div id="slider-container" class="">
               <div
-                class="flex flex-col w-full justify-center items-center text-center mt-25 z-50"
+                class="textport flex flex-col w-full justify-center items-center text-center mt-25 z-50"
+                aria-hidden="true"
               >
                 <h4
-                  class="textportfolio font-bold uppercase text-lg text-primary mb-2"
+                  class="textportfolio font-bold uppercase text-[1rem] text-primary mb-2"
                 >
                   Portfolio
                 </h4>
                 <h2
-                  class="textproject font-bold text-rodokputih text-3xl mb-4 sm:text-4xl lg:text-5xl"
+                  class="textportfolio font-bold text-rodokputih lg:text-[4rem] md:text-[3rem] text-[2.3rem] mb-4 sm:text-4xl lg:text-5xl"
                 >
                   Project Terbaru
                 </h2>
@@ -242,12 +292,13 @@
                 </div> -->
 
                 <a
-                  href="#"
-                  class="button button--stroke items-center bg-transparent border-none rounded-[6.25rem] text-rodokputih stroke-2 stroke-rodokputih cursor-pointer inline-flex text-[1rem] font-[600] gap-[0.363636em] justify-center leading-[1.04545] tracking-[-0.01em] px-[0.9375rem] py-[1rem] relative no-underline break-words hover:text-black hover:stroke-black overflow-hidden after:bottom-0 after:left-0 after:absolute after:right-0 after:top-0 after:border-[0.125rem] after:border-rodokputih after:rounded-[6.25rem] after:pointer-events-none transition-colors duration-300 ease-in-out z-10"
+                  href="./Portfoliopage/portfolio.html"
+                  id="button-lihatport"
+                  class="button button--stroke items-center shadow-[rgba(8,0,245,0.1)] scale-100 border-none rounded-[6.25rem] backdrop-blur-2xl bg-[rgba(255,255,255,0.8)] text-[rgba(0,0,0,0.8)] stroke-2 stroke-[rgba(0,0,0,0.8)] cursor-pointer inline-flex text-[1rem] font-[600] gap-[0.363636em] justify-center leading-[1.04545] tracking-[-0.01em] px-[0.9375rem] py-[1rem] relative no-underline break-words hover:text-[rgba(1,0,41,1)] hover:stroke-[rgba(1,0,41,1)] hover:shadow-2xl hover:shadow-[rgba(12,93,255,0.8)] overflow-hidden after:bottom-0 after:left-0 after:absolute after:right-0 after:top-0 after:border-[0.125rem] after:border-rodokputih hover:after:border-primary after:rounded-[6.25rem] after:pointer-events-none transition-[colors,transform] duration-300 ease-in-out z-10"
                   data-block="button"
                 >
                   <span
-                    class="button__flair bottom-0 left-0 pointer-events-none absolute right-0 top-0 scale-0 origin-[0] will-change-transform z-0 before:aspect-square before:bg-rodokputih before:rounded-[50%] before:block before:left-0 before:pointer-events-none before:absolute before:top-0 before:translate-x-[-50%] before:translate-y-[-50%] before:w-[170%]"
+                    class="button__flair bottom-0 left-0 pointer-events-none absolute right-0 top-0 scale-0 origin-[0] will-change-transform z-0 before:aspect-square before:bg-radial-[at_50%_75%] before:from-[rgba(186,230,255,1)] before:via-[rgba(12,93,255,0.8)] before:to-[rgba(9,3,166,0.8)] before:to-98% before:rounded-[50%] before:block before:left-0 before:pointer-events-none before:absolute before:top-0 before:translate-x-[-50%] before:translate-y-[-50%] before:w-[170%]"
                   ></span>
                   <span
                     class="button__label relative pl-3 text-center transition-colors duration-[0.15s] ease-in-out z-10"
@@ -279,7 +330,7 @@
               > -->
               <div
                 id="image-track"
-                class="flex absolute items-center -bottom-100 w-full mt-1"
+                class="flex absolute items-center -bottom-170 w-full mt-1"
               >
                 <div class="panel items-center">
                   <img
@@ -294,7 +345,7 @@
                     src="dist/Image/AyamCeker1.webp"
                     alt="portfolio-2"
                     class="relative w-40 h-[58vmin] object-cover object-center left-[70%] grayscale blur-xs opacity-15 hover:grayscale-0 hover:blur-none hover:opacity-100 transition-all duration-700 ease-in-out z-[3]"
-                    data-speed="0,6"
+                    data-speed="1.1"
                   />
                 </div>
                 <div class="panel items-center">
@@ -310,7 +361,7 @@
                     src="dist/Image/MieAyam1.webp"
                     alt="portfolio-4"
                     class="relative w-46 h-[36vmin] object-cover object-center left-[300%] grayscale opacity-25 hover:grayscale-0 hover:opacity-100 transition-all duration-700 ease-in-out z-[5]"
-                    data-speed="2"
+                    data-speed="0.7"
                   />
                 </div>
                 <div class="panel items-center">
@@ -318,7 +369,7 @@
                     src="dist/Image/Awinet1.webp"
                     alt="portfolio-10"
                     class="relative w-36 h-[48vmin] object-cover object-bottom bottom-[-200%] left-[-90%] blur-[2px] grayscale opacity-25 hover:blur-none hover:grayscale-0 hover:opacity-100 transition-all duration-700 ease-in-out z-[5]"
-                    data-speed="1.2"
+                    data-speed="0.7"
                   />
                 </div>
                 <div class="panel items-center">
@@ -370,98 +421,156 @@
         <!-- Client Section Start -->
         <section
           id="clients"
-          class="bagian pt-16 pb-16 bg-dark overflow-hidden relative z-[0]"
+          class="relative after:absolute bagian pt-16 pb-16 bg-gradient-to-b from-0.1% from-dark via-98% via-darkbanget to-darkbanget overflow-hidden z-[0]"
         >
-          <div
-            class="mx-8 inline-flex justify-center items-center container gap-10"
-          >
+          <div class="wraplogo container">
             <div
-              class="grayscale-100 opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
+              class="logoclient logo1 grayscale-100 opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
             >
               <img
                 src="dist/Image/Logo/Logo_Adannet.png"
                 alt=""
-                class="max-w-[200px]"
+                class="max-h-[100px]"
               />
             </div>
             <div
-              class="grayscale-100 opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
+              class="logoclient logo2 grayscale-100 opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
             >
               <img
                 src="dist/Image/Logo/Logo_DimsumMamaOmar.png"
                 alt=""
-                class="max-w-[100px]"
+                class="max-h-[100px]"
               />
             </div>
             <div
-              class="grayscale-100 opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
+              class="logoclient logo3 grayscale-100 opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
             >
               <img
                 src="dist/Image/Logo/Logo_KebabMimi.png"
                 alt=""
-                class="max-w-[100px]"
+                class="max-h-[100px]"
               />
             </div>
             <div
-              class="grayscale-100 opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
+              class="logoclient logo4 grayscale-100 opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
             >
               <img
                 src="dist/Image/Logo/Logo_MieDelima.png"
                 alt=""
-                class="max-w-[100px]"
+                class="max-h-[100px]"
               />
             </div>
             <div
-              class="grayscale-100 opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
+              class="logoclient logo5 grayscale-100 opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
             >
               <img
                 src="dist/Image/Logo/Logo_RihaFurniture.png"
                 alt=""
-                class="max-w-[100px]"
+                class="max-h-[100px]"
               />
             </div>
             <div
-              class="grayscale-100 opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
+              class="logoclient logo6 grayscale-100 opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
             >
               <img
                 src="dist/Image/Logo/Logo_SambalNyus.png"
                 alt=""
-                class="max-w-[145px]"
+                class="max-h-[100px]"
               />
             </div>
             <div
-              class="grayscale-100 opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
+              class="logoclient logo7 grayscale-100 opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
             >
               <img
                 src="dist/Image/Logo/Logo_Awinet.png"
                 alt=""
-                class="max-w-[200px]"
+                class="max-h-[100px]"
+              />
+            </div>
+            <div
+              class="logoclient logo8 grayscale-100 opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
+            >
+              <img
+                src="dist/Image/Logo/Logo_GenC.png"
+                alt=""
+                class="max-h-[100px]"
+              />
+            </div>
+            <div
+              class="logoclient logo9 grayscale-100 opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
+            >
+              <img
+                src="dist/Image/Logo/Logo_MitraJaya.png"
+                alt=""
+                class="max-h-[100px]"
+              />
+            </div>
+            <div
+              class="logoclient logo10 grayscale-100 opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
+            >
+              <img
+                src="dist/Image/Logo/Logo_Jibon.png"
+                alt=""
+                class="max-h-[100px]"
+              />
+            </div>
+            <div
+              class="logoclient logo11 grayscale-100 opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
+            >
+              <img
+                src="dist/Image/Logo/Logo_OppaCoin.png"
+                alt=""
+                class="max-h-[100px]"
               />
             </div>
           </div>
         </section>
         <!-- Client Section End -->
 
-        <!-- Blog Section Start -->
+        <!-- Our Service Section Start -->
         <section
           id="blog"
           class="bagian pt-36 pb-32 bg-slate-100 relative z-[0]"
         >
-          <div class="container mx-auto">
+          <div class="bloggu container mx-auto">
             <div class="w-full px-4">
-              <div class="max-w-xl mx-auto text-center mb-16">
+              <div
+                class="blogu max-w-xl mx-auto text-center mb-16"
+                aria-hidden="true"
+              >
+                <h4 class="font-bold uppercase text-lg text-primary mb-2">
+                  Our
+                </h4>
+                <h2
+                  class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl"
+                >
+                  Services
+                </h2>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Our Service Section End -->
+
+        <!-- Blog Section Start -->
+        <!-- <section
+          id="blog"
+          class="bagian pt-36 pb-32 bg-slate-100 relative z-[0]"
+        >
+          <div class="bloggu container mx-auto">
+            <div class="w-full px-4">
+              <div
+                class="blogu max-w-xl mx-auto text-center mb-16"
+                aria-hidden="true"
+              >
                 <h4 class="font-bold uppercase text-lg text-primary mb-2">
                   Blog
                 </h4>
                 <h2
                   class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl"
                 >
-                  Project Terkini
+                  For Your Information
                 </h2>
-                <p class="font-medium text-md text-secondary md:text-lg">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Reprehenderit esse veniam maiores nisi?
-                </p>
               </div>
             </div>
             <div class="flex flex-wrap">
@@ -554,7 +663,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
         <!-- Blog Section End -->
 
         <!-- Contact Section Start -->
@@ -752,6 +861,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MorphSVGPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/PixiPlugin.min.js"></script>
     <!-- ScrollSmoother requires ScrollTrigger -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
