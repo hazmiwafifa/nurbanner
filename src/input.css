@@ -188,9 +188,68 @@ body {
   animation-iteration-count: infinite; /* Makes the animation repeat indefinitely */
 }
 
+@keyframes fadeInOutcahaya {
+  0% {
+    opacity: 0; /* Start completely transparent */
+    width: 0;
+  }
+  50% {
+    opacity: 1; /* Start completely transparent */
+    width: 100%;
+  }
+  100% {
+    opacity: 0; /* Fully visible at the midpoint */
+    width: 0;
+  }
+}
+
 #gradasibmud3 {
-  animation-name: fadeInOut; /* Name of your @keyframes rule */
+  animation-name: fadeInOutcahaya; /* Name of your @keyframes rule */
   animation-duration: 4s; /* Total duration of one cycle (e.g., 4 seconds) */
   animation-timing-function: ease-in-out; /* Controls the speed curve */
   animation-iteration-count: infinite; /* Makes the animation repeat indefinitely */
+}
+
+@keyframes scrollpanah {
+  /* 0%: Panah dimulai dari atas (di luar batas pandang) */
+  0% {
+    transform: translateY(-100%);
+  }
+  /* 100%: Panah selesai di bawah (di luar batas pandang) */
+  50% {
+    transform: none;
+  }
+  100% {
+    transform: translateY(100%);
+  }
+  /* Transisi dari 100% kembali ke 0% tersembunyi oleh overflow: hidden */
+}
+
+.panahscroll {
+  animation-name: scrollpanah;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s; /* Penundaan awal */
+}
+
+@keyframes gradient-sweep {
+  0% {
+    background-position: 200% 200%;
+  }
+  50% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.definisi2 {
+  /* Properti yang mengatur perulangan sweep */
+  animation-name: gradient-sweep;
+  animation-duration: 3.5s;
+  animation-timing-function: ease-in-out; /* KRUSIAL: Untuk perulangan yang mulus (smooth loop) */
+  animation-iteration-count: infinite; /* Ulangi tanpa batas */
+  animation-delay: 0.5s; /* Penundaan awal */
 }

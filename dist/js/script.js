@@ -330,7 +330,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     duration: 5.9,
     autoAlpha: 0,
     ease: "power3.out",
-    delay: 4,
+    delay: 1.5,
   });
 
   SplitText.create("#judul", {
@@ -376,21 +376,38 @@ document.addEventListener("DOMContentLoaded", (event) => {
     autoAlpha: 0,
     stagger: 0.01,
     ease: "power4.out",
-    delay: 3.5,
+    delay: 3,
   });
 
-  let splitdefinisi2 = SplitText.create(".definisi2", {
-    type: "words, chars, lines",
-    aria: "hidden",
-  });
+  // gsap.to(".definisi2", {
+  //   // backgroundPosition akan bergerak dari posisi awal (0% 50% karena bg-left)
+  //   // ke posisi akhir (100% 50%), kemudian kembali (yoyo: true).
+  //   backgroundPosition: "100% 50%",
+  //   duration: 3,
+  //   ease: "power2.inOut",p
+  //   delay: 0.5, // Sedikit jeda sebelum mulai
+  //   repeat: -1, // Ulangi tanpa batas
+  //   yoyo: true,
+  // });
 
-  gsap.from(splitdefinisi2.words, {
-    duration: 2,
-    y: 50,
+  // let splitdefinisi2 = SplitText.create(".definisi2", {
+  //   type: "words, chars, lines",
+  //   aria: "hidden",
+  // });
+
+  // gsap.from(splitdefinisi2.words, {
+  //   duration: 2,
+  //   autoAlpha: 0,
+  //   stagger: 0.01,
+  //   ease: "power4.out",
+  // });
+
+  gsap.from(".definisi2", {
+    yPercent: 100,
+    duration: 3,
     autoAlpha: 0,
-    stagger: 0.01,
     ease: "power4.out",
-    delay: 4.5,
+    delay: 3.5,
   });
 
   gsap.from(".panahdefin", {
@@ -398,7 +415,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     y: 50,
     autoAlpha: 0,
     ease: "power4.out",
-    delay: 4.5,
+    delay: 3.5,
   });
 
   gsap.from("#bintang1", {
@@ -452,7 +469,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // mask: "lines",
   });
 
-  let splitblog = SplitText.create(".blogu", {
+  let splitserv = SplitText.create(".services", {
     type: "words, chars, lines",
     aria: "hidden",
     // mask: "lines",
@@ -507,14 +524,50 @@ document.addEventListener("DOMContentLoaded", (event) => {
   //   })
   //   .addLabel("end");
 
-  gsap.from(splitblog.words, {
+  gsap.from(splitserv.words, {
     autoAlpha: 0,
     duration: 3,
     filter: "blur(8px)",
     ease: "sine.out",
     stagger: 0.1,
     scrollTrigger: {
-      trigger: ".blogu",
+      trigger: ".services",
+      toggleActions: "restart pause resume none",
+    },
+  });
+
+  gsap.from(".brandidentity", {
+    yPercent: 50,
+    autoAlpha: 0,
+    duration: 3,
+    delay: 1,
+    ease: "sine.out",
+    scrollTrigger: {
+      trigger: "#services",
+      toggleActions: "restart pause resume none",
+    },
+  });
+
+  gsap.from(".digitalcontent", {
+    yPercent: 50,
+    autoAlpha: 0,
+    duration: 3,
+    delay: 1.3,
+    ease: "sine.out",
+    scrollTrigger: {
+      trigger: "#services",
+      toggleActions: "restart pause resume none",
+    },
+  });
+
+  gsap.from(".marketingmaterial", {
+    yPercent: 50,
+    autoAlpha: 0,
+    duration: 3,
+    delay: 1.6,
+    ease: "sine.out",
+    scrollTrigger: {
+      trigger: "#services",
       toggleActions: "restart pause resume none",
     },
   });
@@ -552,7 +605,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     height: 0,
     width: 0,
     autoAlpha: 0,
-    duration: 2,
+    duration: 1,
     delay: 1,
     ease: "power3.out",
     scrollTrigger: {
@@ -564,7 +617,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   gsap.from(".button--stroke .button__label", {
     autoAlpha: 0,
     duration: 1.5,
-    delay: 2.9,
+    delay: 2,
     stagger: 0.1,
     ease: "power3.out",
     scrollTrigger: {

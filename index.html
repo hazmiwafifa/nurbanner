@@ -26,7 +26,7 @@
     />
     <title>NUR BANNER STUDIO</title>
   </head>
-  <body class="badan bg-dark px-16">
+  <body class="badan bg-dark px-20">
     <div id="smooth-wrapper">
       <!-- Header Start -->
       <header id="head">
@@ -84,9 +84,9 @@
                 </li>
                 <li class="px-[25px] list-none z-10">
                   <a
-                    href="#blog"
+                    href="#services"
                     class="block py-1 text-base decoration-0 z-[1] text-center opacity-80 hover:text-blue-800 hover:opacity-100 hover:scale-[1.1] hover:font-bold transition duration-100 ease-in-out"
-                    >Blog</a
+                    >Services</a
                   >
                 </li>
                 <li class="px-[25px] list-none z-10">
@@ -150,14 +150,14 @@
                 </div>
                 <h1
                   id="judul"
-                  class="text-rodokputih text-center font-black lg:text-[4rem] md:text-[3rem] text-[2.3rem] uppercase z-20"
+                  class="text-[#f3faff] text-center font-black lg:text-[4rem] md:text-[3rem] text-[2.3rem] uppercase z-20"
                 >
                   Your Vision
                   <p class="leading-12 font-bold">&</p>
                   OUR Expertise
                 </h1>
                 <div
-                  class="flex items-center justify-center font-medium text-center text-rodokputih text-[12px] lg:text-[1.2rem] md:text-[18.5414px] mb-5 mt-2"
+                  class="flex items-center justify-center font-medium text-center text-[rgba(211,237,255,0.8)] text-[12px] lg:text-[1.2rem] md:text-[18.5414px] mb-5 mt-2"
                 >
                   <span id="subjudul"> Let's create design magic</span>
                   <img
@@ -174,9 +174,11 @@
                   />
                 </div>
               </div>
-              <div class="justify-items-end text-right right-0">
+              <div
+                class="container lg:justify-items-end lg:text-right lg:right-0 sm:right-[none] sm:text-center sm:justify-items-center"
+              >
                 <p
-                  class="definisi end-0 w-1/5 text-[0.8rem] font-light tracking-wider text-[rgba(221,221,221,0.8)] top-[-1rem] px-10"
+                  class="definisi lg:end-0 lg:w-1/5 text-[0.8rem] font-light tracking-wider text-[rgba(178,224,255,0.7)] top-[-1rem] lg:px-10"
                   aria-hidden="true"
                 >
                   We are a creative team dedicated to creating attractive
@@ -184,15 +186,16 @@
                 </p>
               </div>
               <div
-                class="flex justify-items-start items-center pl-10 text-left w-1/4"
+                class="scrollto absolute flex bottom-30 lg:justify-items-start items-center px-10 lg:text-left lg:w-1/4 sm:w-full sm:text-center sm:justify-items-center sm:justify-center z-10 overflow-hidden"
               >
                 <p
-                  class="definisi2 text-[0.8rem] font-light tracking-wider uppercase text-[rgba(221,221,221,0.8)] top-[-1rem] px-2"
+                  class="definisi2 flex items-center bg-left bg-[length:200%_100%] opacity-100 bg-gradient-to-r from-[rgba(22,119,255,0.5)0%] via-[#b2e0ff] via-80% to-[rgba(22,119,255,0.5)50%] bg-clip-text text-transparent text-[0.8rem] font-normal tracking-wider uppercase top-[-1rem] px-2"
+                  aria-hidden="true"
                 >
                   scroll to explore
                 </p>
                 <span
-                  class="panahdefin px-1 py-1 bg-transparent border-1 border-amber-50 rounded-full"
+                  class="panahdefin px-1 py-1 bg-transparent border-1 border-[rgba(178,224,255,0.7)] rounded-full"
                   ><svg
                     class="w-4.5 h-4.5 text-gray-800 dark:text-white"
                     aria-hidden="true"
@@ -203,7 +206,7 @@
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       d="M12 19V5m0 14-4-4m4 4 4-4"
-                      class="stroke-2 stroke-[rgba(221,221,221,0.8)]"
+                      class="panahscroll stroke-2 stroke-[rgba(178,224,255,1)]"
                     />
                   </svg>
                 </span>
@@ -262,7 +265,7 @@
                 <h2
                   class="textportfolio font-bold text-rodokputih lg:text-[4rem] md:text-[3rem] text-[2.3rem] mb-4 sm:text-4xl lg:text-5xl"
                 >
-                  Project Terbaru
+                  Latest Project
                 </h2>
                 <!-- <div
                   href="#"
@@ -302,9 +305,10 @@
                   ></span>
                   <span
                     class="button__label relative pl-3 text-center transition-colors duration-[0.15s] ease-in-out z-10"
-                    >Lihat Portfolio</span
+                    >View Portfolio</span
                   >
                   <svg
+                    id="panahlihat"
                     class="flex relative mr-3 transition-all duration-300 ease-in-out"
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -529,23 +533,86 @@
 
         <!-- Our Service Section Start -->
         <section
-          id="blog"
+          id="services"
           class="bagian pt-36 pb-32 bg-slate-100 relative z-[0]"
         >
-          <div class="bloggu container mx-auto">
+          <div class="container mx-auto">
             <div class="w-full px-4">
               <div
-                class="blogu max-w-xl mx-auto text-center mb-16"
+                class="services max-w-xl mx-auto text-center mb-16"
                 aria-hidden="true"
               >
-                <h4 class="font-bold uppercase text-lg text-primary mb-2">
+                <h4 class="font-bold uppercase text-[1rem] text-primary mb-2">
                   Our
                 </h4>
                 <h2
-                  class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl"
+                  class="font-bold text-dark text-[4rem] mb-4 sm:text-4xl lg:text-5xl"
                 >
                   Services
                 </h2>
+              </div>
+              <div class="container flex justify-center gap-17 mx-auto my-5">
+                <div class="brandidentity w-1/5">
+                  <img
+                    src="dist/Image/IconBrand.svg"
+                    alt=""
+                    class="iconbrand w-[70px] h-[70px]"
+                  />
+                  <h3 class="pt-5 font-bold text-[2.5rem] leading-10">
+                    Brand Identity
+                  </h3>
+                  <p class="font-medium text-[0.8rem] mt-4">
+                    Brands are the most important business assets. We create
+                    cohesive, credible, and future-proof brand identities. From
+                    strong visual architecture to strict brand guidelines, we
+                    ensure your brand looks premium and consistent in the eyes
+                    of global and local markets, building loyalty from the first
+                    glance.
+                  </p>
+                </div>
+                <div class="digitalcontent w-1/5">
+                  <img
+                    src="dist/Image/DigitalContent.svg"
+                    alt=""
+                    class="iconbrand w-[70px] h-[70px]"
+                  />
+                  <h3 class="pt-5 font-bold text-[2.5rem] leading-10">
+                    Digital Content
+                  </h3>
+                  <p class="font-medium text-[0.8rem] mt-4">
+                    In a fast-scrolling world dominated by AI and
+                    micro-attention, your content must captivate within the
+                    first 3 seconds. We design conversion-oriented digital
+                    content
+                    <span class="px-1 tracking-[0.1em] font-semibold"
+                      >(Social Media/Ads Banner).</span
+                    >
+                    Our designs are not only beautiful—they are also
+                    data-driven, attract the right audience, and maximize ROI
+                    from every impression.
+                  </p>
+                </div>
+                <div class="marketingmaterial w-1/5">
+                  <img
+                    src="dist/Image/MarketingMaterial.svg"
+                    alt=""
+                    class="iconbrand w-[70px] h-[70px]"
+                  />
+                  <h3 class="pt-5 font-bold text-[2.5rem] leading-10">
+                    Marketing Material
+                  </h3>
+                  <p class="font-medium text-[0.8rem] mt-4">
+                    Turn information into an undeniable sales tool. We design
+                    your marketing materials
+                    <span class="px-1 tracking-[0.1em] font-semibold"
+                      >( Brochures, Company Profiles, Posters, Banner )</span
+                    >
+                    into compelling visual narratives. These are physical and
+                    digital touchpoints that convey a sense of professionalism
+                    and authority, helping your sales team close deals faster
+                    and leave a lasting impression.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
