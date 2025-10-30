@@ -553,7 +553,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   gsap.from(splitserv.words, {
     autoAlpha: 0,
-    duration: 3,
+    duration: 1.5,
     filter: "blur(8px)",
     ease: "sine.out",
     stagger: 0.1,
@@ -566,7 +566,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   gsap.from(".brandidentity", {
     yPercent: 50,
     autoAlpha: 0,
-    duration: 3,
+    duration: 1.5,
     delay: 1,
     ease: "sine.out",
     scrollTrigger: {
@@ -578,7 +578,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   gsap.from(".digitalcontent", {
     yPercent: 50,
     autoAlpha: 0,
-    duration: 3,
+    duration: 1.5,
     delay: 1.3,
     ease: "sine.out",
     scrollTrigger: {
@@ -590,7 +590,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   gsap.from(".marketingmaterial", {
     yPercent: 50,
     autoAlpha: 0,
-    duration: 3,
+    duration: 1.5,
     delay: 1.6,
     ease: "sine.out",
     scrollTrigger: {
@@ -601,7 +601,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   gsap.from(splitabout.words, {
     autoAlpha: 0,
-    duration: 3,
+    duration: 1.5,
     filter: "blur(8px)",
     ease: "sine.out",
     stagger: 0.1,
