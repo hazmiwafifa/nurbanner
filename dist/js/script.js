@@ -771,4 +771,60 @@ document.addEventListener("DOMContentLoaded", (event) => {
   //     end: "clamp(bottom center)",
   //   },
   // });
+
+  const gallery = document.getElementById("gallery");
+  const heroSection = document.getElementById("Hero");
+
+  // Pastikan elemen-elemen ada sebelum menjalankan animasi
+  if (gallery && heroSection) {
+    // Dapatkan lebar total konten galeri (scrollWidth)
+    const galleryWidth = gallery.scrollWidth;
+
+    // Dapatkan lebar viewport
+    const viewportWidth = window.innerWidth;
+
+    // Hitung jarak yang harus digeser.
+    const distanceToScroll = galleryWidth - viewportWidth;
+
+    // Hanya jalankan jika konten galeri lebih lebar dari layar
+    if (distanceToScroll > 0) {
+      // DEBUG: Tambahkan log untuk melihat perhitungan
+      console.log("--- GSAP Horizontal Scroll Debug ---");
+      console.log("Lebar Galeri (scrollWidth):", galleryWidth);
+      console.log("Lebar Viewport:", viewportWidth);
+      console.log("Jarak Geser (distanceToScroll):", distanceToScroll);
+      console.log(
+        "Tinggi Pin Section:",
+        distanceToScroll + viewportWidth + "px"
+      );
+
+      // Tinggi yang akan dikonversi menjadi animasi horizontal
+      // Kita buat tinggi section Hero sesuai dengan jarak horizontal yang akan ditempuh
+      heroSection.style.height = `${distanceToScroll + viewportWidth}px`;
+
+      gsap.to(gallery, {
+        // x: Menganimasikan posisi horizontal ke kiri
+        x: -distanceToScroll,
+
+        ease: "none", // Agar pergeseran linear dengan scroll
+
+        scrollTrigger: {
+          trigger: heroSection, // Elemen yang menjadi pemicu (section Hero)
+          start: "top top", // Animasi dimulai saat bagian atas trigger menyentuh bagian atas viewport
+          end: () => `+=${distanceToScroll}`, // Animasi berakhir setelah jarak scroll vertikal sama dengan jarak horizontal yang ditempuh
+          scrub: 1, // Menghubungkan animasi dengan scroll, 1 adalah level smoothing
+          pin: true, // "Menjepit" (pin) elemen trigger saat animasi berjalan
+          anticipatePin: 1, // Untuk pengalaman pin yang lebih mulus
+          markers: true, // AKTIFKAN MARKER UNTUK DEBUGGING
+          invalidateOnRefresh: true, // Penting agar perhitungan jarak di-update saat resize
+        },
+      });
+    } else {
+      console.warn(
+        "Galeri tidak cukup lebar untuk scroll horizontal. Jarak geser nol atau negatif."
+      );
+    }
+  } else {
+    console.error("Elemen #gallery atau #Hero tidak ditemukan.");
+  }
 });
